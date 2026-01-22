@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ $# -lt 1 ]]; then
+  echo "usage: run <file> [args...]" >&2
+  exit 2
+fi
+
+ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+
+FILE=$1
+shift
+
+if [[ ! -f "$FILE" ]]; then
+  echo "file not found: $FILE" >&2
+  exit 2
+fi
+
+EXT=${FILE##*.}
+
+case "$EXT" in
+  py)
+    python3 "$FILE" "$@"
+    ;;
+  ts)
+    NPM_CONFIG_CACHE="$ROOT_DIR/.cache/npm"
+    export NPM_CONFIG_CACHE
+    mkdir -p "$NPM_CONFIG_CACHE"
+    npx tsx "$FILE" "$@"
+    ;;
+  *)
+    echo "unsupported extension: .$EXT" >&2
+    exit 2
+    ;;
+ esac
