@@ -1,0 +1,7 @@
+{
+  "name": "problem-solving-notebook",
+  "private": true,
+  "devDependencies": {
+    "tsx": "^4.7.0"
+  }
+}
