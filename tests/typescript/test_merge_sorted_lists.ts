@@ -3,7 +3,7 @@ const assert = require("node:assert").strict;
 const path = require("node:path");
 
 const rootDir = path.resolve(__dirname, "../..");
-const modulePath = path.resolve(rootDir, "problems/typescript/MergeSortedLists.ts");
+const modulePath = path.resolve(rootDir, "problems/typescript/05_linked_list/MergeSortedLists.ts");
 const loaded = require(modulePath);
 
 const ListNode = loaded.ListNode;

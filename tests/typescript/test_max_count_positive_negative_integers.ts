@@ -3,7 +3,7 @@ const assert = require("node:assert").strict;
 const path = require("node:path");
 
 const rootDir = path.resolve(__dirname, "../..");
-const modulePath = path.resolve(rootDir, "problems/typescript/MaxCountPosititveNegativeIntegers.ts");
+const modulePath = path.resolve(rootDir, "problems/typescript/03_sorting_and_order/MaxCountPosititveNegativeIntegers.ts");
 const loaded = require(modulePath);
 
 function resolveMaximumCount(mod) {

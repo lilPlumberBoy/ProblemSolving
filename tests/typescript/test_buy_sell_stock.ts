@@ -3,7 +3,7 @@ const assert = require("node:assert").strict;
 const path = require("node:path");
 
 const rootDir = path.resolve(__dirname, "../..");
-const modulePath = path.resolve(rootDir, "problems/typescript/BuySellStock.ts");
+const modulePath = path.resolve(rootDir, "problems/typescript/02_two_pointers/BuySellStock.ts");
 const loaded = require(modulePath);
 
 function resolveMaxProfit(mod) {

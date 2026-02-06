@@ -3,7 +3,7 @@ const assert = require("node:assert").strict;
 const path = require("node:path");
 
 const rootDir = path.resolve(__dirname, "../..");
-const modulePath = path.resolve(rootDir, "problems/typescript/MajorityElement.ts");
+const modulePath = path.resolve(rootDir, "problems/typescript/01_arrays/MajorityElement.ts");
 const loaded = require(modulePath);
 
 function resolveMajorityElement(mod) {
