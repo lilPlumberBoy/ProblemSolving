@@ -1,5 +1,5 @@
 class Solution:
-    def isPalindrome(self, x: int) -> bool:
+    def isPalindrome(self, x: int)->bool:
         if x < 0:
             return False
 
@@ -15,3 +15,10 @@ class Solution:
             temp //= 10
 
         return reversed_num == x
+
+
+if __name__ == "__main__":
+    import sys
+
+    value = int(sys.argv[1]) if len(sys.argv) > 1 else 121
+    print(Solution().isPalindrome(value))
