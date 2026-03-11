@@ -40,7 +40,10 @@ function insert(intervals: number[][], newInterval: number[]): number[][] {
   return result;
 }
 
-function insertOnline(intervals: number[][], newInterval: number[]): number[][] {
+function insertOnline(
+  intervals: number[][],
+  newInterval: number[],
+): number[][] {
   const result: number[][] = [];
 
   // Iterate through intervals and add non-overlapping intervals before newInterval
